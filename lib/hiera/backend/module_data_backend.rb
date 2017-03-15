@@ -57,8 +57,7 @@ class Hiera
       end
 
       def lookup(key, scope, order_override, resolution_type)
-        answer = nil
-        found  = false
+        answer = :no_such_key
 
         Hiera.debug("Looking up %s in Module Data backend" % key)
 
@@ -89,7 +88,6 @@ class Hiera
 
           next if data.empty?
           next unless data.include?(key)
-          found  = true
 
           new_answer = Backend.parse_answer(data[key], scope)
           case resolution_type
@@ -108,10 +106,10 @@ class Hiera
           end
         end
 
-        if !found
-          return no_answer
+        if answer == :no_such_key
+          no_answer
         else
-          return answer
+          answer
         end
       end
     end

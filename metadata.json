@@ -1,10 +1,13 @@
 {
-  "author": "R.I.Pienaar <rip@devco.net>",
-  "license": "ASL 2.0",
   "name": "ripienaar-module_data",
-  "project_page": "https://github.com/ripienaar/puppet-module-data",
-  "source": "https://github.com/ripienaar/puppet-module-data.git",
-  "summary": "A hiera backend to allow the use of data while writing sharable modules",
   "version": "0.5.1",
-  "dependencies": []
+  "author": "R.I.Pienaar <rip@devco.net>",
+  "summary": "A hiera backend to allow the use of data while writing sharable modules",
+  "license": "ASL 2.0",
+  "source": "https://github.com/ripienaar/puppet-module-data.git",
+  "project_page": "https://github.com/ripienaar/puppet-module-data",
+  "issues_url": "https://github.com/ripienaar/puppet-module-data/issues",
+  "dependencies": [
+  
+  ]
 }
